@@ -22,7 +22,8 @@ else:
     x=int(input("Alege numarul de poze de antrenare, de preferat:6, 8, 9\n"))
 
     A=np.zeros([10304,40*x])
-    caleBD=r'F:\zSCOALA\acs folder\proiect\att_faces'
+    #AT&T Database of Faces
+    caleBD=r'F:\zSCOALA\acs folder\proiect\att_faces' #calea catre poza
 
     for i in range(1,41):
         caleFolderPers = caleBD + '\s'+str(i) +'\\'
@@ -43,7 +44,7 @@ else:
     else:
         print("Automat se va alege persoana 8.\n")
         #pentru alegere automata
-        calePozaCautata=r'F:\zSCOALA\acs folder\proiect\att_faces\s8\10.pgm'  
+        calePozaCautata=r'F:\zSCOALA\acs folder\proiect\att_faces\s8\10.pgm'  #calea catre poza
     
     pozaCautata=np.array(cv2.imread(calePozaCautata,0))
     pozaCautataVect=pozaCautata.reshape(-1,)
